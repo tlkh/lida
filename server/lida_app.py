@@ -2,6 +2,8 @@
 #  IMPORT STATEMENTS
 ##############################################
 
+import argparse
+
 # == Native ==
 import os
 import sys
@@ -356,7 +358,12 @@ class LidaApp(object):
 ##############################################
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--port", action="store", default="8000")
+
+    args = parser.parse_args()
+    port = int(args.port)
 
     app = LidaApp()
 
-    app.run()
+    app.run(port=port)
