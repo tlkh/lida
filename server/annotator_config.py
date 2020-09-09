@@ -69,32 +69,32 @@ class Configuration(object):
             "labels"      : [
                 "happiness",
                 "sadness",
-                "disgust",
+                "disgust/rejection",
                 "anger",
                 "surprise",
                 "embarrassment",
-                "guilt/shame",
+                "guilt/apologetic",
                 "fear",
-                "relief",
+                "relief/calm",
                 "no emotion"
             ]
 
         },
 
-        "2_-_cause": {
+        "2_-_cause/intent": {
 
-            "description" : "Cause of the emotion",
+            "description" : "Cause or intent underlying the emotion",
             "label_type"  : "multilabel_classification",
             "required"    : False,
             "labels"      : [
-                "Conflict",
-                "Persuation",
-                "Empathy",
-                "Deceit",
-                "Personal Action",
-                "Personal Story",
-                "Personal Belief",
-                "Others (add details)",
+                "conflict/disagreement",
+                "persuation",
+                "empathy",
+                "deceit",
+                "past experience",
+                "action taken",
+                "personal opinion",
+                "other (add detail below)",
             ]
 
         },
