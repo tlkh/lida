@@ -359,7 +359,7 @@ class LidaApp(object):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--port", action="store", default="8000")
+    parser.add_argument("-p", "--port", action="store", default="5000")
 
     args = parser.parse_args()
     port = int(args.port)
