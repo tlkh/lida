@@ -19,13 +19,13 @@ Vue.component("resolution-menu", {
     template:
     `
     <div id="resolution-menu">
-        <button v-on:click="go_back_to_all_dialogues($event)" class="back-button btn btn-sm">Back to All Dialgoues</button>
+        <button v-on:click="go_back_to_all_dialogues($event)" class="back-button btn btn-sm">Back to All Dialogues</button>
     </div>
     `
 })
 
 // <div id="resolution-menu">
-//     <button v-on:click="go_back_to_all_dialogues($event)" class="back-button">Back to All Dialgoues</button>
+//     <button v-on:click="go_back_to_all_dialogues($event)" class="back-button">Back to All Dialogues</button>
 //
 //     <div class="dialogue-name">
 //

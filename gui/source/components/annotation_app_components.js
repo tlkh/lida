@@ -297,7 +297,7 @@ Vue.component('dialogue-menu',{
     template:
     `
     <div id="dialogue-menu">
-        <button v-on:click="go_back_to_all_dialogues($event)" class="back-button btn btn-sm">Back to All Dialgoues</button>
+        <button v-on:click="go_back_to_all_dialogues($event)" class="back-button btn btn-sm">Back to All Dialogues</button>
 
         <div class="dialogue-name">
 

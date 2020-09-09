@@ -1,5 +1,5 @@
 /************************************
-* All Dialgoues View "aka MAIN LIDA VIEW"
+* All Dialogues View "aka MAIN LIDA VIEW"
 *************************************/
 
 
