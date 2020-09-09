@@ -45,63 +45,68 @@ class Configuration(object):
             "required"    : True
         },
 
-        "query_type": {
+        # "query_type": {
 
-            "description" : "Whether the query was request / inform / farewell",
+        #     "description" : "Whether the query was request / inform / farewell",
+        #     "label_type"  : "multilabel_classification",
+        #     "required"    : False,
+        #     "model"       : TypeDummyModel(),
+        #     "labels"      : [
+
+        #         "request",
+        #         "inform",
+        #         "farewell"
+
+        #     ]
+
+        # },
+
+        "Emotion": {
+
+            "description" : "Emotion expressed during this turn",
+            "label_type"  : "multilabel_classification",
+            "required"    : True,
+            "labels"      : [
+                "happiness",
+                "sadness",
+                "disgust",
+                "anger",
+                "surprise",
+                "embarrassment"
+                "guilt/shame"
+                "fear",
+                "relief",
+                "no emotion"
+            ]
+
+        },
+
+        "Cause (label)": {
+
+            "description" : "Cause of the emotion",
             "label_type"  : "multilabel_classification",
             "required"    : False,
-            "model"       : TypeDummyModel(),
             "labels"      : [
-
-                "request",
-                "inform",
-                "farewell"
-
+                "Conflict",
+                "Persuation",
+                "Empathy",
+                "Deceit",
+                "Personal Action",
+                "Personal Story",
+                "Personal Belief",
+                "Others (add details)",
             ]
 
         },
 
-        "hotel_belief_state": {
+        "Cause detail": {
 
-            "description" : "Slot-value pairs",
-            "label_type"  : "multilabel_classification_string",
-            "required"    : False,
-            "model"       : BeliefStateDummyModel(),
-            "labels"      : [
-
-                "hotel-book people",
-                "hotel-book stay",
-                "hotel-book day",
-                "hotel-name"
-
-            ]
-
-        },
-
-        "policy_funcs": {
-
-            "description" : "Policy functions called for this query",
-            "label_type"  : "multilabel_classification",
-            "required"    : False,
-            "model"       : PolicyDummyModel(),
-            "labels"      : [
-
-                "Say Goodbye",
-                "Find And Offer Booking",
-                "Ask For Missing Slots",
-                'Provide Info',
-                'Try Book'
-
-            ]
-
-        },
-
-        "sys": {
-            "description" : "The system's response",
+            "description" : "Optionally provide more information about the cause",
             "label_type"  : "string",
-            "model"       : SysDummyModel(),
-            "required"    : True
-        }
+            "required"    : False
+        },
+
+        
 
     }
 
