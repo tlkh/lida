@@ -60,6 +60,9 @@
 
 .multilabel-string-input {
     grid-area: inputZone;
+    border: #222;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .checkbox-wrapper {

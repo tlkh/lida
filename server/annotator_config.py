@@ -40,13 +40,7 @@ class Configuration(object):
     configDict = {
 
         "usr": {
-            "description" : "Person A",
-            "label_type"  : "data",  # This type, "data", acts the same as "string" but will always be displayed first in UI
-            "required"    : True
-        },
-
-        "sys": {
-            "description" : "Person B",
+            "description" : "Person",
             "label_type"  : "data",  # This type, "data", acts the same as "string" but will always be displayed first in UI
             "required"    : True
         },
@@ -67,7 +61,7 @@ class Configuration(object):
 
         # },
 
-        "Emotion": {
+        "1_-_emotion": {
 
             "description" : "Emotion expressed during this turn",
             "label_type"  : "multilabel_classification",
@@ -78,8 +72,8 @@ class Configuration(object):
                 "disgust",
                 "anger",
                 "surprise",
-                "embarrassment"
-                "guilt/shame"
+                "embarrassment",
+                "guilt/shame",
                 "fear",
                 "relief",
                 "no emotion"
@@ -87,7 +81,7 @@ class Configuration(object):
 
         },
 
-        "Cause (label)": {
+        "2_-_cause": {
 
             "description" : "Cause of the emotion",
             "label_type"  : "multilabel_classification",
@@ -105,11 +99,14 @@ class Configuration(object):
 
         },
 
-        "Cause detail": {
+        "3_-_cause_detail": {
 
             "description" : "Optionally provide more information about the cause",
-            "label_type"  : "string",
-            "required"    : False
+            "label_type"  : "multilabel_classification_string",
+            "required"    : False,
+            "labels"      : [
+                "cause_detail"
+            ]
         },
 
         
