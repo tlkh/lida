@@ -47,7 +47,7 @@ class Configuration(object):
 
         "sys": {
             "description" : "Person B",
-            "label_type"  : "string",  # This type, "data", acts the same as "string" but will always be displayed first in UI
+            "label_type"  : "data",  # This type, "data", acts the same as "string" but will always be displayed first in UI
             "required"    : True
         },
 
