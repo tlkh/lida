@@ -40,7 +40,7 @@ class Configuration(object):
     configDict = {
 
         "usr": {
-            "description" : "The user's query",
+            "description" : "The person's utterence",
             "label_type"  : "data",  # This type, "data", acts the same as "string" but will always be displayed first in UI
             "required"    : True
         },
@@ -65,7 +65,7 @@ class Configuration(object):
 
             "description" : "Emotion expressed during this turn",
             "label_type"  : "multilabel_classification",
-            "required"    : True,
+            "required"    : False,
             "labels"      : [
                 "happiness",
                 "sadness",
