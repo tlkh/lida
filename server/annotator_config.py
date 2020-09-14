@@ -45,68 +45,56 @@ class Configuration(object):
             "required"    : True
         },
 
-        # "query_type": {
+        
 
-        #     "description" : "Whether the query was request / inform / farewell",
-        #     "label_type"  : "multilabel_classification",
-        #     "required"    : False,
-        #     "model"       : TypeDummyModel(),
-        #     "labels"      : [
+        "1_-_Sentiment": {
 
-        #         "request",
-        #         "inform",
-        #         "farewell"
-
-        #     ]
-
-        # },
-
-        "1_-_emotion": {
-
-            "description" : "Emotion expressed during this turn",
+            "description" : "Sentiment expressed during this turn. Select only 1.",
             "label_type"  : "multilabel_classification",
-            "required"    : False,
+            "required"    : True,
             "labels"      : [
-                "happiness",
-                "sadness",
-                "disgust/rejection",
-                "anger",
-                "surprise",
-                "embarrassment",
-                "guilt/apologetic",
-                "fear",
-                "relief/calm",
-                "no emotion"
+                "positive",
+                "neutral",
+                "negative"
             ]
 
         },
 
-        "2_-_cause/intent": {
+        "2_-_Cause": {
 
-            "description" : "Cause or intent underlying the emotion",
+            "description" : "Cause underlying the emotion. Select at least 1.",
             "label_type"  : "multilabel_classification",
             "required"    : False,
             "labels"      : [
-                "conflict/disagreement",
-                "persuation",
-                "empathy",
-                "deceit",
-                "past experience",
-                "action taken",
-                "personal opinion",
-                "other (add detail below)",
+                "agree_with_action",
+                "agree_with_opinion",
+                "disagree_with_action",
+                "disagree_with_opinion",
+                "conflict",
+                "subject_of_deceit",
+                "subject_of_persuation",
+                "past_experience",
+                "personal_opinion",
+                "none",
+                "other (elaborate below)"
             ]
 
         },
 
-        "3_-_cause_detail": {
+        "3_-_Other_Cause_Detail": {
 
             "description" : "Optionally provide more information about the cause",
             "label_type"  : "multilabel_classification_string",
             "required"    : False,
             "labels"      : [
-                "cause_detail"
+                "other_detail"
             ]
+        },
+
+        "context": {
+            "description" : "Relevant Cause Context",
+            "label_type"  : "string",
+            "required"    : True
         },
 
         
