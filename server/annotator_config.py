@@ -62,32 +62,55 @@ class Configuration(object):
 
         "2_-_Cause": {
 
-            "description" : "Cause underlying the emotion. Select at least 1.",
+            "description" : "Type of cause underlying the emotion. Select at least 1.",
             "label_type"  : "multilabel_classification",
             "required"    : False,
             "labels"      : [
-                "agree_with_action",
-                "agree_with_opinion",
-                "disagree_with_action",
-                "disagree_with_opinion",
-                "conflict",
-                "subject_of_deceit",
-                "subject_of_persuation",
-                "past_experience",
-                "personal_opinion",
-                "none",
-                "other (elaborate below)"
+                "Agree with action",
+                "Agree with opinion",
+                "Disagree with action",
+                "Disagree with opinion",
+                "Conflict",
+                "Goal achieved",
+                "Goal not achieved",
+                "Empathy",
+                "Subject of deceit",
+                "subject of persuation",
+                "Past experience",
+                "Personal opinion",
+                "None",
+                "Other (elaborate below)"
             ]
 
         },
 
-        "3_-_Other_Cause_Detail": {
+        "2B_-_Other_Cause_Detail": {
 
             "description" : "Optionally provide more information about the cause",
             "label_type"  : "multilabel_classification_string",
             "required"    : False,
             "labels"      : [
                 "other_detail"
+            ]
+        },
+        
+        "3_-_Needs_Fulfillment": {
+
+            "description" : "Indicate fulfillment of Marslow need",
+            "label_type"  : "multilabel_classification",
+            "required"    : False,
+            "labels"      : [
+                "Physiological - fulfilled",
+                "Physiological - NOT fulfilled",
+                "Safety - fulfilled",
+                "Safety - NOT fulfilled",
+                "Frienship - fulfilled",
+                "Frienship - NOT fulfilled",
+                "Esteem - fulfilled",
+                "Esteem - NOT fulfilled",
+                "Self-actualisation - fulfilled",
+                "Self-actualisation - NOT fulfilled",
+                "None
             ]
         },
 
