@@ -110,7 +110,7 @@ class Configuration(object):
                 "Esteem - NOT fulfilled",
                 "Self-actualisation - fulfilled",
                 "Self-actualisation - NOT fulfilled",
-                "None
+                "None",
             ]
         },
 
