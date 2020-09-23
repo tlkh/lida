@@ -79,7 +79,7 @@ class Configuration(object):
                 "Past experience",
                 "Personal opinion",
                 "None",
-                "Other (elaborate below)"
+                "Other (elaborate in 2B below)"
             ]
 
         },
@@ -110,7 +110,7 @@ class Configuration(object):
                 "Esteem - NOT fulfilled",
                 "Self-actualisation - fulfilled",
                 "Self-actualisation - NOT fulfilled",
-                "None",
+                "N/A",
             ]
         },
 
