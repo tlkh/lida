@@ -45,22 +45,8 @@ class Configuration(object):
             "required"    : True
         },
 
-        
 
-        "1_-_Sentiment": {
-
-            "description" : "Sentiment expressed during this turn. Select only 1.",
-            "label_type"  : "multilabel_classification",
-            "required"    : True,
-            "labels"      : [
-                "positive",
-                "neutral",
-                "negative"
-            ]
-
-        },
-
-        "2_-_Cause": {
+        "1A_-_Cause": {
 
             "description" : "Type of cause underlying the emotion. Select at least 1.",
             "label_type"  : "multilabel_classification",
@@ -79,12 +65,12 @@ class Configuration(object):
                 "Past experience",
                 "Personal opinion",
                 "None",
-                "Other (elaborate in 2B below)"
+                "Other (elaborate in 1B below)"
             ]
 
         },
 
-        "2B_-_Other_Cause_Detail": {
+        "1B_-_Other_Cause_Detail": {
 
             "description" : "Optionally provide more information about the cause",
             "label_type"  : "multilabel_classification_string",
@@ -94,7 +80,7 @@ class Configuration(object):
             ]
         },
         
-        "3_-_Needs_Fulfillment": {
+        "2_-_Needs_Fulfillment": {
 
             "description" : "Indicate fulfillment of Marslow need",
             "label_type"  : "multilabel_classification",
@@ -104,8 +90,8 @@ class Configuration(object):
                 "Physiological - NOT fulfilled",
                 "Safety - fulfilled",
                 "Safety - NOT fulfilled",
-                "Friendship - fulfilled",
-                "Friendship - NOT fulfilled",
+                "Social - fulfilled",
+                "Social - NOT fulfilled",
                 "Esteem - fulfilled",
                 "Esteem - NOT fulfilled",
                 "Self-actualisation - fulfilled",
@@ -114,10 +100,20 @@ class Configuration(object):
             ]
         },
 
+        "3_-_Problematic": {
+
+            "description" : "Describe any issue with the current turn",
+            "label_type"  : "multilabel_classification_string",
+            "required"    : False,
+            "labels"      : [
+                "problem_detail"
+            ]
+        },
+
         "context": {
             "description" : "Relevant Cause Context",
             "label_type"  : "string",
-            "required"    : True
+            "required"    : False
         },
 
         
