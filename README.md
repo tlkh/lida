@@ -57,15 +57,10 @@ server to run.
 
 ### Downloading & Installing Requirements
 
-It is strongly recommended that you clone into a Python virtual environment:
-
 ```bash
-$ mkdir LIDA/
-$ python3 -m venv LIDA/
-$ cd LIDA/ && source bin/activate
-(LIDA)$ git clone https://github.com/Wluper/lida.git
-(LIDA)$ cd lida/
-(LIDA)$ pip3 install -r requirements.txt
+$ git clone https://github.com/tlkh/lida.git
+$ cd lida/
+$ pip3 install -r requirements.txt
 ```
 
 ### Running the Main Server
@@ -73,32 +68,15 @@ $ cd LIDA/ && source bin/activate
 Assuming you have just followed the steps to Download and Install Requirements:
 
 ```bash
-(LIDA)$ pwd
-~/LIDA/lida
-(LIDA)$ cd server/
-(LIDA)$ python lida_app.py
+$ python lida_app.py
 ```
 
 You should see the Flask server running in the Terminal now on port 5000.
 
-
-### Running the Inter-Annotator Disagreement Resolution Server
-
-Assuming you have just followed the steps to Download and Install Requirements:
-
-```bash
-(LIDA)$ pwd
-~/LIDA/lida
-(LIDA)$ cd server/
-(LIDA)$ python interannotator_app.py
-```
-
-You should see the Flask server running in the Terminal now on port 5000.
 
 ### Running the Front End
 
-Simply double click on `gui/index.html` for the main LIDA app, and on `gui/admin.html`
-for the inter-annotator disagreement resolution page.
+Simply double click on `gui/index.html` for the main LIDA app.
 
 
 ## Adding Custom Labels
