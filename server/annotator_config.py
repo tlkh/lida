@@ -60,9 +60,11 @@ class Configuration(object):
                 "Goal achieved",
                 "Goal not achieved",
                 "Empathy",
+                "Apathy",
                 "Subject of deceit",
                 "subject of persuation",
                 "Past experience",
+                "Curiosity",
                 "Personal opinion",
                 "None",
                 "Other (elaborate in 1B below)"
