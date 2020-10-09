@@ -57,6 +57,7 @@ class Configuration(object):
                 "Disagree with action",
                 "Disagree with opinion",
                 "Conflict",
+                "Harmony",
                 "Goal achieved",
                 "Goal not achieved",
                 "Empathy",
